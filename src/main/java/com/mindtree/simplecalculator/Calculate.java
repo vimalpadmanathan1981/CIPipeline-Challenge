@@ -14,7 +14,6 @@ public class Calculate {
 		int y=20;
 		System.out.println(add(x,y));
 		System.out.println(subtract(x,y));
-		System.out.println("hi hellooo multiplication")
 	}
 
 }
