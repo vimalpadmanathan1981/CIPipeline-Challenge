@@ -58,12 +58,12 @@ pipeline{
               last_started=env.STAGE_NAME
             }
         rtUpload(
-         serverId : 'ARTIFACTORY_SERVER',
+         serverId : 'Artifact-server',
          spec :'''{
            "files" :[
            {
            "pattern":"target/*.jar",
-           "target":"art-doc-devo-loc"
+           "target":"art-mav-rep"
            }
            ]
          }''',
