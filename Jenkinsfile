@@ -43,6 +43,22 @@ pipeline{
                 waitForQualityGate abortPipeline: true
             }
         }
+     stage('Deploy to artifactory'){
+        steps{
+        rtUpload(
+         serverId : 'vimal-jfrog',
+         spec :'''{
+           "files" :[
+           {
+           "pattern":"target/*.jar",
+           "target":"Maven-V2"
+           }
+           ]
+         }''',
+         
+      )
+      }
+     } 
      
     }
     post {  
